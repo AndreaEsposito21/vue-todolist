@@ -63,5 +63,13 @@ body {
 li span i {
     float: right;
     cursor: pointer;
+    margin: 0 20px;
 }
+/* Bonus */
+.text-line {
+    text-decoration: line-through;
+    background-color: #00e165;
+    color: white;
+}
+
 /* END MAIN */

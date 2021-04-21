@@ -33,9 +33,10 @@
             <main>
                 <div class="todo-container">
                     <ul class="todo-list">
-                        <li v-for="(todo, index) in todoArray">
-                            {{todo}}
+                        <li v-for="(todo, index) in todoArray" :class="{ 'text-line': todo.check }">
+                            {{todo.text}}
                             <span @click="deleteTodo(index)"><i class="fas fa-times"></i></span>
+                            <span @click="lineThroughTodo(index)"><i class="fas fa-check"></i></span>
                         </li>
                     </ul>
                 </div>

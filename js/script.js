@@ -9,10 +9,19 @@ var app = new Vue({
     data: {
         utenteNuovoTodo: '',
         todoArray: [
-            'Fare i compiti',
-            'Fare la spesa',
-            'Fare il bucato'
-        ],
+            {
+                text: 'Fare i compiti',
+                check: false
+            },
+            {
+                text: 'Fare la spesa',
+                check: false
+            },
+            {
+                text: 'Fare il bucato',
+                check: false
+            }
+        ]
     },
     methods: {
         
@@ -24,6 +33,10 @@ var app = new Vue({
         },
         deleteTodo(index) {
             this.todoArray.splice(index, 1);
+        },
+        // Bonus
+        lineThroughTodo(index) {
+            this.todoArray[index].check = !this.todoArray[index].check;
         }
     }
 });
