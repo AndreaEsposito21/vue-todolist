@@ -27,7 +27,10 @@ var app = new Vue({
         
         nuovoTodo() {
             if (this.utenteNuovoTodo.length > 0) {
-                this.todoArray.push(this.utenteNuovoTodo);
+                this.todoArray.push({
+                    text: this.utenteNuovoTodo,
+                    check: false
+                });
                 this.utenteNuovoTodo = '';
             }
         },
