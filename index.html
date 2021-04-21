@@ -25,7 +25,7 @@
                 </div>
     
                 <nav class="todo-bar">
-                    <input v-model="utenteNuovoTodo" class="input-text" type="text" placeholder="Nuovo Todo">
+                    <input v-model="utenteNuovoTodo" @keyup.enter='nuovoTodo' class="input-text" type="text" placeholder="Nuovo Todo">
                     <button @click="nuovoTodo" class="btn">Aggiungi</button>
                 </nav>
             </header>
@@ -33,9 +33,9 @@
             <main>
                 <div class="todo-container">
                     <ul class="todo-list">
-                        <li v-for="todo in todoArray">
+                        <li v-for="(todo, index) in todoArray">
                             {{todo}}
-                            <span><i class="fas fa-times"></i></span>
+                            <span @click="deleteTodo(index)"><i class="fas fa-times"></i></span>
                         </li>
                     </ul>
                 </div>

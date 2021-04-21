@@ -21,6 +21,9 @@ var app = new Vue({
                 this.todoArray.push(this.utenteNuovoTodo);
                 this.utenteNuovoTodo = '';
             }
+        },
+        deleteTodo(index) {
+            this.todoArray.splice(index, 1);
         }
     }
 });
