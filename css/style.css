@@ -62,5 +62,6 @@ body {
 
 li span i {
     float: right;
+    cursor: pointer;
 }
 /* END MAIN */

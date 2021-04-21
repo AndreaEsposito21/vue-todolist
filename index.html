@@ -25,16 +25,16 @@
                 </div>
     
                 <nav class="todo-bar">
-                    <input class="input-text" type="text" placeholder="Nuovo Todo">
-                    <button class="btn">Aggiungi</button>
+                    <input v-model="utenteNuovoTodo" class="input-text" type="text" placeholder="Nuovo Todo">
+                    <button @click="nuovoTodo" class="btn">Aggiungi</button>
                 </nav>
             </header>
 
             <main>
                 <div class="todo-container">
                     <ul class="todo-list">
-                        <li>
-                            Test
+                        <li v-for="todo in todoArray">
+                            {{todo}}
                             <span><i class="fas fa-times"></i></span>
                         </li>
                     </ul>
